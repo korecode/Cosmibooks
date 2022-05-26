@@ -25,9 +25,9 @@ header .logo {
     transition: color 500ms ease;
 }
 
-    header .logo:hover {
-        color: #9D4EDD;
-    }
+header .logo:hover {
+    color: #9D4EDD;
+}
 
 
 header ul.nav {
@@ -160,4 +160,8 @@ a {
 }
 white {
     color: #fff
+}
+
+tr {
+    color: #fff;
 }
