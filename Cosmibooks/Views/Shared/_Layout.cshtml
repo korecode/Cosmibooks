@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="~/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/css/style.css" rel="stylesheet" type="text/css" />
+</head>
+<body class='wrapper'>
+    <header>
+        <div>
+            <span class='logo'>
+                    Cosmibooks
+            </span>
+            <ul class='nav'>
+                <li><a href="/">Главная</a></li>
+                <li><a href="/books/list">Все книги</a></li>
+                <li><a href="#">Подписки</a></li>
+                <li>
+                    @if(User.Identity.IsAuthenticated)
+                        {
+                            <a class='active3' >@User.Identity.Name</a>
+                            <li>
+                                <form method="post" asp-controller="Account" asp-action="Logout">
+                                <input type="submit" value="Выход" />
+                            </form>
+                            </li>
+                            
+                        }
+                    else
+                        {
+                            <li><a class='active' asp-controller="Account" asp-action="Login">Вход</a></li>
+                            <li><a class='active' asp-controller="Account" asp-action="Register">Регистрация</a></li>
+                        }
+                </li>
+            </ul>
+        </div>
+        <div class='presentation'></div>
+    </header>
+    <nav class="site-header">
+      <div>
+        
+        <ul class='nav'>
+            
+        </ul>
+        
+        
+        
+        
+      </div>
+    </nav>
+    <div class="container mt-5">
+        @RenderBody()
+    </div>
+    <footer class="container">
+        <p class="float-right"><a href="#">Наверх</a></p>
+        <p>© 2022 MilkyWayBook · <a href="#">Privacy</a></p>
+      </footer>
+    <script src="~/js/bootstrap.min.js"></script>
+</body>
+</html>

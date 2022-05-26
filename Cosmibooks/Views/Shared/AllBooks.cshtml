@@ -1,0 +1,13 @@
+﻿@model Book
+
+@{
+    ViewData["Title"] = "Cosmibooks - Все книги";
+}
+<div class="col-lg-2">
+        <img class="img-thumbnail" src="@Model.img" alt="@Model.name" />
+        <h3>Имя: @Model.name</h3>
+        <p>@Model.author</p>
+        <p>Подписка: @Model.subs</p>
+        <p><a class="btn btn-warning" href="#">Читать</a></p>
+</div>
+

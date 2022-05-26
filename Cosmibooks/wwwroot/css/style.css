@@ -1,0 +1,163 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&display=swap');
+
+.wrapper {
+    width: 98%;
+    max-width: 1280px;
+    margin: 50px auto;
+}
+
+body {
+    background: #111112;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+}
+
+header {
+    position: relative;
+}
+
+header .logo {
+    font-weight: 600;
+    font-size: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: color 500ms ease;
+}
+
+    header .logo:hover {
+        color: #9D4EDD;
+    }
+
+
+header ul.nav {
+    float: right;
+    list-style: none;
+}
+
+header ul.nav li {
+    display: inline;
+    margin-left: 25px;
+    cursor: pointer;
+    border-radius: 20px;
+    text-decoration: none;
+    transition: background 500ms ease, color 500ms ease;
+}
+
+header ul.nav li a {
+    text-decoration: none;
+    color: #fff;
+    padding: 5px 15px;
+    border-radius: 20px;
+    transition: background 500ms ease, color 500ms ease;
+}
+
+header ul.nav li a:hover {
+    background: #FF9E00FF;
+    color: #111112;
+    border-radius: 20px;
+}
+
+header ul.nav li a.active {
+    background: #FF9E00FF;
+    color: #111112;
+    border-radius: 30px;
+    transition: background 500ms ease, color 500ms ease;
+}
+header ul.nav li a.active:hover {
+    background: #FF9E00FF;
+    color: #111112;
+}
+
+header ul.nav li a.active2 {
+    background: #FF9E00FF;
+    color: #111112;
+    width: 10px;
+    border-radius: 5px;
+}
+header ul.nav li a.active3 {
+    background: #1d1e22;
+    color: #FF9E00FF;
+    border-radius: 50px;
+}
+
+header .presentation {
+    margin: 50px 0;
+    width: 100%;
+    height: 470px;
+    background-size: cover;
+    background-blend-mode: multiply;
+    background: #bcbcbc url('./img/main.jpg') no-repeat center center;
+    position: relative;
+    border-radius: 30px;
+    transition: transform 500ms ease;
+}
+
+header .presentation:hover {
+}
+
+header .presentation::after {
+    content: 'Читай, думай и слушай';
+    position: absolute;
+    top: 100px;
+    left: 50px;
+    width: 300px;
+    font-size: 40px;
+    font-weight: 600;
+    color: #fff;
+    transition: animation 500ms ease, text-shadow 500ms ease, transform 500ms ease, color 500ms ease;
+}
+
+header .presentation::before {
+    content: 'Библиотека книг';
+    position: absolute;
+    top: 220px;
+    left: 50px;
+    width: 300px;
+    font-size: 15px;
+    font-weight: 300;
+    color: #fff;
+}
+
+header .presentation:hover::after {
+    color: #ff9e00;
+    animation: glow 800ms infinite;
+    animation-duration: 3200ms;
+}
+
+@keyframes glow {
+    0% {
+        transform: scale(1);
+        text-shadow: 0 0 0 #ff9e00;
+    }
+
+    50% {
+        transform: scale(1.05);
+        text-shadow: 0 0 10px #ff9e00;
+    }
+
+    100% {
+        transform: scale(1);
+        text-shadow: 0 0 0 #ff9e00;
+    }
+}
+
+h3 {
+    color: #fff
+}
+h2 {
+    color: #fff
+}
+h1 {
+    color: #fff
+}
+p {
+    color: #fff
+}
+a {
+    text-decoration: none;
+    color: #fff;
+}
+white {
+    color: #fff
+}
